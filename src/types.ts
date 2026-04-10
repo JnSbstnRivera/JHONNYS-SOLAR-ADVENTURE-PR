@@ -1,6 +1,7 @@
 
 export enum GameState {
-  MENU = 'MENU',
+  INTRO = 'INTRO',
+  CHARACTER_SELECT = 'CHARACTER_SELECT',
   PLAYING = 'PLAYING',
   GAMEOVER = 'GAMEOVER',
   WIN = 'WIN'
@@ -11,6 +12,15 @@ export interface GameObject {
   y: number;
   width: number;
   height: number;
+}
+
+export interface Character {
+  id: string;
+  name: string;
+  imageUrl: string;
+  description: string;
+  available: boolean;
+  accentColor: string;
 }
 
 export const CITIES = [

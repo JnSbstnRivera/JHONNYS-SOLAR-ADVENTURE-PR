@@ -19,6 +19,7 @@ import { CITIES } from '../types';
 
 interface GameProps {
   onGameOver: (score: number, distance: number, city: string, win?: boolean) => void;
+  characterUrl?: string;
 }
 
 interface Particle {
@@ -54,7 +55,7 @@ interface Obstacle {
   bobOffset?: number;
 }
 
-const Game: React.FC<GameProps> = ({ onGameOver }) => {
+const Game: React.FC<GameProps> = ({ onGameOver, characterUrl }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const requestRef = useRef<number>(0);
@@ -116,7 +117,7 @@ const Game: React.FC<GameProps> = ({ onGameOver }) => {
   }, []);
 
   useEffect(() => {
-    trexImg.current.src = TREX_IMAGE_URL;
+    trexImg.current.src = characterUrl || TREX_IMAGE_URL;
     lumaBillImg.current.src = FLOATING_OBSTACLE_URL; // Usamos la URL del Bill de Luma proporcionada
     BACKGROUND_URLS.forEach((url, i) => {
       const img = new Image();
@@ -543,6 +544,8 @@ const Game: React.FC<GameProps> = ({ onGameOver }) => {
       if (canvasRef.current && canvasRef.current.parentElement) {
         canvasRef.current.width = canvasRef.current.parentElement.clientWidth;
         canvasRef.current.height = canvasRef.current.parentElement.clientHeight;
+        // On mobile keep player close to the left edge (classic dino style)
+        player.current.x = canvasRef.current.width < 600 ? 80 : 150;
       }
     };
     handleResize(); window.addEventListener('resize', handleResize);

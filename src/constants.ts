@@ -1,9 +1,11 @@
 
+import { Character } from './types';
+
 export const GRAVITY = 0.8;
 export const JUMP_FORCE = -15;
 export const DOUBLE_JUMP_FORCE = -13;
-export const BASE_SPEED = 10; 
-export const SPEED_INCREMENT = 1.0; 
+export const BASE_SPEED = 10;
+export const SPEED_INCREMENT = 1.0;
 export const METERS_PER_CITY = 100;
 export const MAX_LIVES_INITIAL = 3;
 export const MAX_LIVES_LIMIT = 5;
@@ -48,4 +50,31 @@ export const LOSS_PHRASES = [
   "¡Pichea y dale otra vez!",
   "¡Mano, qué mal!",
   "¡Se fue la luz, mano!"
+];
+
+export const CHARACTERS: Character[] = [
+  {
+    id: 'jhonny',
+    name: 'JHONNY',
+    imageUrl: TREX_IMAGE_URL,
+    description: '¡El original! Rápido y sin miedo.',
+    available: true,
+    accentColor: '#3b82f6',
+  },
+  {
+    id: 'char2',
+    name: '???',
+    imageUrl: '',
+    description: 'Próximamente...',
+    available: false,
+    accentColor: '#f59e0b',
+  },
+  {
+    id: 'char3',
+    name: '???',
+    imageUrl: '',
+    description: 'Próximamente...',
+    available: false,
+    accentColor: '#10b981',
+  },
 ];
