@@ -114,7 +114,7 @@ const CharacterSelect: React.FC<CharacterSelectProps> = ({ onStart }) => {
                     <motion.img
                       src={char.imageUrl}
                       alt={char.name}
-                      className="w-4/5 h-4/5 object-contain relative z-10"
+                      className="absolute inset-0 w-full h-full object-contain p-3"
                       animate={{ y: [0, -7, 0] }}
                       transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                     />
