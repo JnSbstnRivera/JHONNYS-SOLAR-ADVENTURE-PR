@@ -12,10 +12,11 @@ export const MAX_LIVES_LIMIT = 5;
 export const SUNS_PER_LIFE = 5;
 export const POWERUP_BOOST_DISTANCE = 500;
 
-export const TREX_IMAGE_URL    = 'https://i.postimg.cc/mtMKfpYG/trex-jhonny.png';
-export const ANDY_IMAGE_URL    = 'https://i.postimg.cc/KbJSHdpC/Andy.png';
-export const DENJI_IMAGE_URL   = 'https://i.postimg.cc/JMgRd9nK/Denji.png';
-export const BENZEMA_IMAGE_URL = 'https://i.postimg.cc/ZTJYr60B/Benzema.png';
+export const TREX_IMAGE_URL     = 'https://i.postimg.cc/mtMKfpYG/trex-jhonny.png';
+export const ANDY_IMAGE_URL     = 'https://i.postimg.cc/c1L026Jq/Andy.png';
+export const DENJI_IMAGE_URL    = 'https://i.postimg.cc/JMgRd9nK/Denji.png';
+export const BENZEMA_IMAGE_URL  = 'https://i.postimg.cc/ZTJYr60B/Benzema.png';
+export const MARIANA_IMAGE_URL  = 'https://i.postimg.cc/r8qVxhLd/Mari.png';
 export const LOGO_IMAGE_URL    = 'https://i.postimg.cc/6T5J2v2G/logo.png';
 export const WINDMAR_LOGO_URL  = 'https://i.postimg.cc/6T5J2v2G/logo.png';
 export const FLOATING_OBSTACLE_URL = 'https://tse2.mm.bing.net/th/id/OIP.OL7CbpYPxTpdf2O-9TA43QHaKe?rs=1&pid=ImgDetMain&o=7&rm=3';
@@ -85,6 +86,14 @@ export const CHARACTERS: Character[] = [
     name: 'BENZEMA',
     imageUrl: BENZEMA_IMAGE_URL,
     description: '¡Gol de energía solar!',
+    available: true,
+    accentColor: '#7c3aed',
+  },
+  {
+    id: 'mariana',
+    name: 'MARIANA',
+    imageUrl: MARIANA_IMAGE_URL,
+    description: '¡La reina de la isla!',
     available: true,
     accentColor: '#ec4899',
   },
