@@ -75,7 +75,7 @@ export const CHARACTERS: Character[] = [
   },
   {
     id: 'denji',
-    name: 'DENJI',
+    name: 'DENYI',
     imageUrl: DENJI_IMAGE_URL,
     description: '¡Energía sin límites!',
     available: true,
